@@ -8,10 +8,54 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="bg-light">
+<body class="bg-light vh-100 d-flex flex-column">
 	<header class="navbar">
 		<h1 class="text-light font-weight-bold text-center">Weather Dashboard</h1>
 	</header>
+
+	<main class="container-fluid flex-grow-1">
+		<div class="row h-100">
+			<div class="card col-3 m-0 p-0 h-100">
+				<h2 class="card-header text-center">Search for a City</h2>
+				<div class="card-body py-1">
+					<input type="text" id="city" class="w-100 p-1 my-2 rounded" placeholder="San Diego">
+					<button type="submit" id="cityButton" class="btn-block btn-primary">Submit</button>
+					<ul id="prevCities" class="list-group my-3">
+						<!--Populated by script.-->
+					</ul>
+				</div>
+			</div>
+			<div class="card col-9 m-0 container">
+				<div class="row h-50">
+					<div class="col-12">
+						<h2>Selected city</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<h3>Five-Day Forecast:</h3>
+					</div>
+				</div>
+				<div class="row h-50 px-3">
+					<div class="col-sm mx-3">
+						Day 1
+					  </div>
+					  <div class="col-sm mx-3">
+						Day 2
+					  </div>
+					  <div class="col-sm mx-3">
+						Day 3
+					  </div>
+					  <div class="col-sm mx-3">
+						Day 4
+					  </div>
+					  <div class="col-sm mx-3">
+						Day 5
+					  </div>
+				</div>
+			</div>
+		</div>
+	</main>
 
 	<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
 	<script src="assets/src/script.js"></script>

@@ -1,3 +1,8 @@
 header {
 	background: linear-gradient(to right, #3b6dc3, #230555);
 }
+
+.btn-tertiary {
+	background: #bbb;
+	border-color: #999;
+}
