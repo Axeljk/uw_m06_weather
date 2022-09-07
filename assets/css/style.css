@@ -6,3 +6,9 @@ header {
 	background: #bbb;
 	border-color: #999;
 }
+
+#curUV {
+	padding: 4px 8px;
+	color: #fff;
+	border-radius: 8px;
+}

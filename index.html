@@ -28,7 +28,11 @@
 			<div class="card col-9 m-0 container">
 				<div class="row h-50">
 					<div class="col-12">
-						<h2>Selected city</h2>
+						<h2><span id="curCity">Selected City</span> <span id="curDate"></span> <img id="curIcon"></img></h2>
+						<p id="curTemp">Temp: </p>
+						<p id="curWind">Wind: </p>
+						<p id="curHumidity">Humidity: </p>
+						<p>UV index: <span id="curUV"></span></p>
 					</div>
 				</div>
 				<div class="row">
@@ -38,19 +42,69 @@
 				</div>
 				<div class="row h-50 px-3">
 					<div class="col-sm mx-3">
-						Day 1
+						<div class="card bg-light h-100">
+							<div class="card-header">
+								<h3><span id="date1"></span></h2>
+							</div>
+							<div class="card-body">
+								<img id="date1Icon">
+								<p>Temp: <span id="date1Temp"></span></p>
+								<p>Wind: <span id="date1Wind"></span></p>
+								<p>Humidity: <span id="date1Humidity"></span></p>
+							</div>
+						</div>
 					  </div>
 					  <div class="col-sm mx-3">
-						Day 2
+						<div class="card bg-light h-100">
+							<div class="card-header">
+								<h3><span id="date2"></span></h2>
+							</div>
+							<div class="card-body">
+								<img id="date2Icon">
+								<p>Temp: <span id="date2Temp"></span></p>
+								<p>Wind: <span id="date2Wind"></span></p>
+								<p>Humidity: <span id="date2Humidity"></span></p>
+							</div>
+						</div>
 					  </div>
 					  <div class="col-sm mx-3">
-						Day 3
+						<div class="card bg-light h-100">
+							<div class="card-header">
+								<h3><span id="date3"></span></h2>
+							</div>
+							<div class="card-body">
+								<img id="date3Icon">
+								<p>Temp: <span id="date3Temp"></span></p>
+								<p>Wind: <span id="date3Wind"></span></p>
+								<p>Humidity: <span id="date3Humidity"></span></p>
+							</div>
+						</div>
 					  </div>
 					  <div class="col-sm mx-3">
-						Day 4
+						<div class="card bg-light h-100">
+							<div class="card-header">
+								<h3><span id="date4"></span></h2>
+							</div>
+							<div class="card-body">
+								<img id="date4Icon">
+								<p>Temp: <span id="date4Temp"></span></p>
+								<p>Wind: <span id="date4Wind"></span></p>
+								<p>Humidity: <span id="date4Humidity"></span></p>
+							</div>
+						</div>
 					  </div>
 					  <div class="col-sm mx-3">
-						Day 5
+						<div class="card bg-light h-100">
+							<div class="card-header">
+								<h3><span id="date5"></span></h2>
+							</div>
+							<div class="card-body">
+								<img id="date5Icon">
+								<p>Temp: <span id="date5Temp"></span></p>
+								<p>Wind: <span id="date5Wind"></span></p>
+								<p>Humidity: <span id="date5Humidity"></span></p>
+							</div>
+						</div>
 					  </div>
 				</div>
 			</div>
@@ -58,6 +112,7 @@
 	</main>
 
 	<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
 	<script src="assets/src/script.js"></script>
 </body>
 </html>
