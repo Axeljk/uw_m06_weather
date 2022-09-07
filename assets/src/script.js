@@ -22,7 +22,7 @@ window.onload = () => {
 		cityName = $("#city").val();
 		$("#city").val("");
 
-		fetch("http://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=5&appid=e9c23417e6f0f3c2caee34799ba0b8e7")
+		fetch("https://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=5&appid=e9c23417e6f0f3c2caee34799ba0b8e7")
 			.then((response) => response.json())
 			.then((responseJson) => {
 				if (responseJson.length > 0 && responseJson[0].name.toUpperCase() === cityName.toUpperCase()) {
@@ -85,7 +85,7 @@ function weatherPopulate() {
 			console.log(responseJson)
 			$("#curCity").text(responseJson.name);
 			$("#curDate").text(moment(responseJson.dt, "X").format("MM/DD/YYYY"));
-			$("#curIcon").attr("src", "http://openweathermap.org/img/wn/" + responseJson.weather[0].icon + ".png");
+			$("#curIcon").attr("src", "https://openweathermap.org/img/wn/" + responseJson.weather[0].icon + ".png");
 			$("#curTemp").text("Temp: " + ((responseJson.main.temp - 273.15) * 9 / 5 + 32).toFixed(0) + "°F");
 			$("#curWind").text("Wind: " + responseJson.wind.speed + "MPH");
 			$("#curHumidity").text("Humidity: " + responseJson.main.humidity + "%");
@@ -111,7 +111,7 @@ function weatherPopulate() {
 			for (let i = 1; i <= 5; i++) {
 				let forecastIndex = responseJson.list[8 * i - 1];
 				$(`#date${i}`).text(moment(forecastIndex.dt, "X").format("MM/DD/YYYY"));
-				$(`#date${i}Icon`).attr("src", "http://openweathermap.org/img/wn/" + forecastIndex.weather[0].icon + ".png");
+				$(`#date${i}Icon`).attr("src", "https://openweathermap.org/img/wn/" + forecastIndex.weather[0].icon + ".png");
 				$(`#date${i}Temp`).text(((forecastIndex.main.temp - 273.15) * 9 / 5 + 32).toFixed(0) + "°F");
 				$(`#date${i}Wind`).text(forecastIndex.wind.speed + "MPH");
 				$(`#date${i}Humidity`).text(forecastIndex.main.humidity + "%");
