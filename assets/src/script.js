@@ -110,7 +110,7 @@ function weatherPopulate() {
 		.then((responseJson) => {
 			for (let i = 1; i <= 5; i++) {
 				let forecastIndex = responseJson.list[8 * i - 1];
-				$(`#date${i}`).text(moment(forecastIndex.dt, "X").format("MM/DD/YYYY hh:mm a"));
+				$(`#date${i}`).text(moment(forecastIndex.dt, "X").format("MM/DD/YYYY"));
 				$(`#date${i}Icon`).attr("src", "http://openweathermap.org/img/wn/" + forecastIndex.weather[0].icon + ".png");
 				$(`#date${i}Temp`).text(((forecastIndex.main.temp - 273.15) * 9 / 5 + 32).toFixed(0) + "°F");
 				$(`#date${i}Wind`).text(forecastIndex.wind.speed + "MPH");
